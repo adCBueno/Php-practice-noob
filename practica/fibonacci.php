@@ -8,7 +8,7 @@
 </head>
 <body>
     
-<form action="ej3.php" method="post">
+<form action="fibonacci.php" method="post">
         <table>
                 <tr>
                     <td>Ingrese el número que desee:</td>
