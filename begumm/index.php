@@ -14,7 +14,7 @@
         }
         .carousel-inner{
             text-align: center;
-        }
+        }        
     </style>
 
 </head>
@@ -71,108 +71,44 @@
 <br><br>
 
     <h1 class="subtitle" style="text-align: center; color:#2db6bf;">Nuestros productos</h1><br><br>
-
+    
     <div class="container">
-        
+        <!-- lo que se repite -->        
         <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
+            <?php
+                    include "admin/includes/conex.php";
+                    $sql="select * from lentes";
+                    $consulta=mysqli_query($conexion,$sql);
+                    mysqli_close($conexion);
+                    while ($row=mysqli_fetch_array($consulta)) { 
+            ?>
+            <div class="col-md-4">
+        
                 <div class="card">
-                    <img src="https://m.media-amazon.com/images/I/61q59oGCsXL._AC_SX522_.jpg" class="card-img-top" alt="...">
+                    
+                    <img  class="card-img-top" src="admin/img/<?php echo $row['id'];?>.jpg"  alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Lentes bloqueo luz azul, semimontura negro</h5>
-                            <p class="card-text">
-                                - Lente con bloqueo de luz azul: Pueden reducirla en un 90%. <br>
-                                - Diseño clásico: Compuesto de alta calidad. <br>
-                                - Cómodo de llevar: Puede reducir el deslumbramiento, filtrar la dañina radiación. <br>
-                                - Mejor sueño: Puede combatir la fatiga ocular.
-                            </p>
-                        <a href="#" class="btn btn-primary">Ver más</a>
+                            <h5 class="card-title"><?php echo $row['nombre']; ?></h5>
+                            <p><?php echo $row['precio']; ?> Bs.</p>
+                                <p class="card-text">
+                                <?php echo $row['descripcion']; ?>
+                                </p>
+                            <a href="#" class="btn btn-primary">Ver más</a>                        
                     </div>
-                </div>
+                </div>   
             </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://m.media-amazon.com/images/I/61-0EpsPCGL._AC_SX425_.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Lentes bloqueo luz azul, semimontura gris</h5>
-                            <p class="card-text">
-                            - Lente con bloqueo de luz azul: Pueden reducirla en un 90%. <br>
-                            - Diseño clásico: Compuesto de alta calidad. <br>
-                            - Cómodo de llevar: Puede reducir el deslumbramiento, filtrar la dañina radiación. <br>
-                            - Mejor sueño: Puede combatir la fatiga ocular.
-                            </p>
-                            <a href="#" class="btn btn-primary">Ver más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://m.media-amazon.com/images/I/61dV+dpxeIL._AC_SX425_.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Lentes bloqueo luz azul, semimontura transparente</h5>
-                        <p class="card-text">
-                            - Lente con bloqueo de luz azul: Pueden reducirla en un 90%. <br>
-                            - Diseño clásico: Compuesto de alta calidad. <br>
-                            - Cómodo de llevar: Puede reducir el deslumbramiento, filtrar la dañina radiación. <br>
-                            - Mejor sueño: Puede combatir la fatiga ocular.
-                        </p>
-                        <a href="#" class="btn btn-primary">Ver más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://m.media-amazon.com/images/I/61Ta5K-TMAL._AC_SX425_.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Lentes bloqueo luz azul, semimontura rosa</h5>
-                        <p class="card-text">
-                            - Lente con bloqueo de luz azul: Pueden reducirla en un 90%. <br>
-                            - Diseño clásico: Compuesto de alta calidad. <br>
-                            - Cómodo de llevar: Puede reducir el deslumbramiento, filtrar la dañina radiación. <br>
-                            - Mejor sueño: Puede combatir la fatiga ocular.
-                        </p>
-                        <a href="#" class="btn btn-primary">Ver más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                  <img src="https://m.media-amazon.com/images/I/614MwV60XmL._AC_SX425_.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Lentes bloqueo luz azul, semimontura patrón</h5>
-                    <p class="card-text">
-                        - Lente con bloqueo de luz azul: Pueden reducirla en un 90%. <br>
-                        - Diseño clásico: Compuesto de alta calidad. <br>
-                        - Cómodo de llevar: Puede reducir el deslumbramiento, filtrar la dañina radiación. <br>
-                        - Mejor sueño: Puede combatir la fatiga ocular.
-                    </p><a href="#" class="btn btn-primary">Ver más</a>
-                  </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://m.media-amazon.com/images/I/71EhVj+nxNL._AC_SX425_.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Lentes bloqueo luz azul, semimontura plateado</h5>
-                        <p class="card-text">
-                            - Lente con bloqueo de luz azul: Pueden reducirla en un 90%. <br>
-                            - Diseño clásico: Compuesto de alta calidad. <br>
-                            - Cómodo de llevar: Puede reducir el deslumbramiento, filtrar la dañina radiación. <br>
-                            - Mejor sueño: Puede combatir la fatiga ocular.
-                        </p>
-                        <a href="#" class="btn btn-primary">Ver más</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>   
-    </div>
+            <?php } ?>
+            <!-- lo que se repite -->
+        </div>   
+    </div> </div>
 
-
-    <?php
+<div">
+<?php
  include 'admin/includes/footer.php';
     ?>
-   
+</div>
 
+  
+   
 </body>
 </html>

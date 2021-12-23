@@ -15,17 +15,16 @@
   $consulta=mysqli_query($conexion,$sql);
   mysqli_close($conexion);
   if ($consulta) {
-    echo "<div class='alert alert-success'>";
+    echo "<div><br><div class='container alert alert-success'>";
     echo "Sus datos fueron actualizados correctamente.";
-    echo "<div>";
+   
   }
   else{
-    echo "<div class='alert alert-danger'>";
-    echo "Error, vuelva a intentar.";
-    echo "<div>";
+    echo "<div class='alert alert-danger'>Error, vuelva a intentar.</div>";
   }
+  echo "<br><a class='btn btn-info' href='lentes.php'>Volver</a></div></div>";
     ?>
-    <a class="btn btn-info" href="lentes.php">Volver</a>
+    
 
 
     <?php
