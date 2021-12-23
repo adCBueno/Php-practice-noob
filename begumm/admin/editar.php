@@ -12,7 +12,7 @@
 ?>
 
 <div class="container"><br><br>
-<h2>Editar plato</h2>
+<h2>Editar lente</h2>
 <form class="" action="procesar.php" method="post">
   <div class="form-group col-xs-6">
     <input type="hidden" name="id" value="<?php echo $row['id'];?>">

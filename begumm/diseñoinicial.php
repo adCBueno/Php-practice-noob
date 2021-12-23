@@ -1,3 +1,4 @@
+<!--ESTE ES UN ARCHIVO DE EJEMPLO, NO ES FUNCIONAL-->
 <!DOCTYPE html>
 <html lang="es">
 <head>

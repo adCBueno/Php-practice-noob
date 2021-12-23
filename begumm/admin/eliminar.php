@@ -1,4 +1,4 @@
-<?php
+<?php 
   session_start();
   $usuario=$_SESSION['id'];
   $rol=$_SESSION['rol'];
@@ -29,4 +29,4 @@
       else{
         header("location: login.php");
       }
-     ?>
+     ?> 

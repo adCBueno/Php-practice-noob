@@ -1,4 +1,6 @@
 <?php
+
+/* ESTE ARCHIVO NO ES FUNCIONAL */
   session_start();
   $usuario=$_SESSION['id'];
   $rol=$_SESSION['rol'];
@@ -27,11 +29,16 @@ echo "<div class='container'><br>
 </div>
 </div>";
 
+    
+
+
         if($_POST){
             $si=$_POST['si'];
-            $id=$_GET['id'];
+           
             if($si){
                 
+              if($_GET){
+                $id=$_GET['id'];
                 $sql="delete from lentes where id=$id";
                 $consulta=mysqli_query($conexion,$sql);
                 mysqli_close($conexion);
@@ -46,7 +53,10 @@ echo "<div class='container'><br>
                 echo "<div>";
                 }
           
-                echo "<a class='btn btn-info' href='lentes.php'>Volver</a>";      
+                echo "<a class='btn btn-info' href='lentes.php'>Volver</a>";   
+              }
+
+                   
             }
    
    
@@ -65,3 +75,11 @@ echo "<div class='container'><br>
         header("location: login.php");
       }
      ?>
+<!-- 
+     <script>
+       function preguntar(){
+         if(confirm('¿Estás seguro que deseas eliminar?')){
+           window.location.href = "eliminar.php?del="id;
+         }
+       }
+     </script> -->
