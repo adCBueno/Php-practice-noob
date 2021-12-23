@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>PaladArt</title>
+  <title>BeGumm</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
         <li><a href="index.php">Inicio</a></li>
-        <li><a href="platos.php">Platos</a></li>
+        <li><a href="platos.php">Lentes</a></li>
         <li><a href="includes/logout.php">Salir</a></li>
         </ul>
         </div>
@@ -33,7 +33,8 @@
   $rol=$_SESSION["rol"];
   if (isset($usuario)&&$rol=='admin') {
     include 'includes/header.php';
-    echo "Bienvenid@ ".$usuario.'<br> Usted inicio la sesion con rol: '.$rol;
+    echo "<div style='text-align:center; class='container'> <br><h6>Bienvenid@ ".$usuario.'<br> Usted inicio la sesion con rol: '.$rol."</h6></div><br>";
+    echo "<div style='text-align:center;'><img style='width: 15%;' src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Yes_Check_Circle.svg/2048px-Yes_Check_Circle.svg.png' class='card-img-top' alt='...'></div>";
     include 'includes/footer.php';
   }
   else{

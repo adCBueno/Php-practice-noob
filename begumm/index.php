@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,91 +9,6 @@
     <title>BeGumm</title>
 
     <style>
-        .banner{
-            width: 100%;;
-        }
-        .title{
-            text-align: center;
-            padding: 20px;
-            color:  #2db6bf;
-            font-size: 500%;
-        }
-
-
-        .footer {
-            margin: 0;
-            position: relative;
-            width: 100%;
-            background: var(--celeste);
-            min-height: 100px;
-            display: flex;
-            flex-direction: column;
-            bottom: -25px;
-            background-color:  #04c4dc;
-        }
-
-        .footer p {
-            color: #fff;
-            margin: 15px 0 10px 0;
-            font-size: 1rem;
-            font-weight: 300;
-        }
-
-        .wave {
-            position: absolute;
-            top: -100px;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background: url("https://2021.igem.org/wiki/images/2/23/T--Bolivia--footerWave.png");
-            background-size: 1000px 100px;
-        }
-        
-        .wave#wave1 {
-            z-index: 1000;
-            opacity: 1;
-            bottom: 0;
-            animation: animateWaves 4s linear infinite;
-        }
-        
-        .wave#wave2 {
-            z-index: 999;
-            opacity: 0.5;
-            bottom: 10px;
-            animation: animate 4s linear infinite !important;
-        }
-        
-        .wave#wave3 {
-            z-index: 1000;
-            opacity: 0.2;
-            bottom: 15px;
-            animation: animateWaves 3s linear infinite;
-        }
-        
-        .wave#wave4 {
-            z-index: 999;
-            opacity: 0.7;
-            bottom: 20px;
-            animation: animate 3s linear infinite;
-        }
-        
-        @keyframes animateWaves {
-            0% {
-            background-position-x: 1000px;
-            }
-            100% {
-            background-positon-x: 0px;
-            }
-        }
-        
-        @keyframes animate {
-            0% {
-            background-position-x: -1000px;
-            }
-            100% {
-            background-positon-x: 0px;
-            }
-        }
         .caro{
             width: 80%;
         }
@@ -105,63 +20,13 @@
 </head>
 <body>
  
-
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">BeGumm</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav2">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
+<?php
+ include 'admin/includes/header.php';
+?>
 
     <div>
         <img class="banner" src="img/banner.jpg" alt="">
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -303,19 +168,11 @@
     </div>   
     </div>
 
-    <br><br><br><br><br><br>
-    
-        <footer class="footer">
-            <div class="waves">
-                <div class="wave" id="wave1"></div>
-                <div class="wave" id="wave2"></div>
-                <div class="wave" id="wave3"></div>
-                <div class="wave" id="wave4"></div>
-            </div>
-            <div style="text-align: center;"><br>
-                <p>@Todos los derechos reservados.</p>
-            </div>
-        </footer>
+
+    <?php
+ include 'admin/includes/footer.php';
+    ?>
+   
 
 </body>
 </html>
