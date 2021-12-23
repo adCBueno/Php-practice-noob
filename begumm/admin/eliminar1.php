@@ -1,6 +1,6 @@
 <?php
 
-/* ESTE ARCHIVO NO ES FUNCIONAL */
+/* ESTE ARCHIVO NO ES FUNCIONAL, ES SOLO UNA PRUEBA */
   session_start();
   $usuario=$_SESSION['id'];
   $rol=$_SESSION['rol'];
@@ -29,45 +29,41 @@ echo "<div class='container'><br>
 </div>
 </div>";
 
-    
-
-
-        if($_POST){
-            $si=$_POST['si'];
-           
-            if($si){
-                
-              if($_GET){
-                $id=$_GET['id'];
-                $sql="delete from lentes where id=$id";
-                $consulta=mysqli_query($conexion,$sql);
-                mysqli_close($conexion);
-                if ($consulta) {
-                echo "<div class='alert alert-success'>";
-                echo "Sus datos fueron eliminados correctamente.";
-                echo "<div>";
-                }
-                else{
-                echo "<div class='alert alert-danger'>";
-                echo "Error, vuelva a intentar.";
-                echo "<div>";
-                }
+  if($_POST){
+      $si=$_POST['si'];
+      
+      if($si){
           
-                echo "<a class='btn btn-info' href='lentes.php'>Volver</a>";   
-              }
-
-                   
-            }
-   
-   
-                else{
-                header("location: lentes.php");
-                }
+        if($_GET){
+          $id=$_GET['id'];
+          $sql="delete from lentes where id=$id";
+          $consulta=mysqli_query($conexion,$sql);
+          mysqli_close($conexion);
+          if ($consulta) {
+          echo "<div class='alert alert-success'>";
+          echo "Sus datos fueron eliminados correctamente.";
+          echo "<div>";
+          }
+          else{
+          echo "<div class='alert alert-danger'>";
+          echo "Error, vuelva a intentar.";
+          echo "<div>";
+          }
+    
+          echo "<a class='btn btn-info' href='lentes.php'>Volver</a>";   
         }
+
+              
+      }
+
+
+          else{
+          header("location: lentes.php");
+          }
+  }
 
 ?>
   
-
     <?php
         include 'includes/footer.php';
       }

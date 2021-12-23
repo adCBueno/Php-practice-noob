@@ -23,15 +23,10 @@
     <?php } ?>
 <a class="btn btn-info" href="lentes.php" style="margin-top:15px; margin-right:15px;">Volver</a>
  
-
-
 </div>
 
 </form>
 </div>
-
-
-
 
     <?php
         include 'includes/footer.php';

@@ -26,7 +26,6 @@
     ?>
     <a class="btn btn-info" href="lentes.php">Volver</a>
 
-
     <?php
         include 'includes/footer.php';
       }

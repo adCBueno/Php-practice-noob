@@ -28,16 +28,10 @@
         <img class="banner" src="img/banner.jpg" alt="">
     </div>
 
-
-
-
-
     <div class="container">
         <h1 class="title">BeGumm</h1>
         <h5 style="text-align: center;">BeGumm es una empresa que aprovecha los residuos de goma de mascar y les da una nueva vida, convirtiéndolos en monturas modernas de lentes.</h5>
     <br>
-
-
 
     <div class="container">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -108,7 +102,5 @@
     ?>
 </div>
 
-  
-   
 </body>
 </html>
