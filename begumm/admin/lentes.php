@@ -12,7 +12,7 @@
 <br><br>
 <h2>Lentes</h2>
 <a class="btn btn-success pull-right" href="insertar.php">Insertar lentes</a>
-<a class="btn btn-info pull-right" href="imprimir.php">Imprimir</a><br><br>
+<a class="btn btn-info pull-right" href="includes/reporte.php">Imprimir</a><br><br>
 <table class="table">
   <tr>
     <td>Nombre</td>
